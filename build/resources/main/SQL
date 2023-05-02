@@ -1,0 +1,4 @@
+CREATE TABLE Member(
+	loginId varchar(20) not null comment "아이디",
+	password varchar(100) not null comment "비밀번호"
+)
