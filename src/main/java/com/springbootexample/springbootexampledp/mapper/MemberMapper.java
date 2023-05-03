@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Mapper //매핑파일에 기재된 SQL을 호출하기 위한 인터페이스
 public interface MemberMapper {
     void memberSave(Member member);
+    Member login(Member member);
 }

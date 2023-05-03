@@ -6,4 +6,8 @@
     <insert id="memberSave" parameterType="Member">
         insert into Member values (#{loginId}, #{password})
     </insert>
+
+    <select id="login" parameterType="Member" resultType="Member">
+        select * from Member where loginId = #{loginId} and password = #{password}
+    </select>
 </mapper>

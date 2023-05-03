@@ -13,4 +13,6 @@ public class MemberService {
     MemberMapper memberMapper;
 
     public void memberSave(Member member) { memberMapper.memberSave(member);}
+
+    public Member login(Member member) { return memberMapper.login(member);}
 }
