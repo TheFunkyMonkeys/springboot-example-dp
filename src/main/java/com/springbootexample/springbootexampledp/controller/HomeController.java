@@ -38,8 +38,12 @@ public class HomeController {
 
     @PostMapping("/login")
     public String login(@ModelAttribute Member member) {
-        log.info("여기 타겠지 ? : " + member);
-        memberService.login(member);
+        Member loginUser = memberService.login(member);
+
+        if(loginUser == null) {
+            return "faildLogin";
+        }
+
         return "index";
     }
 }
